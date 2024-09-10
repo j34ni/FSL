@@ -1,4 +1,4 @@
-# FSL
+# FSL (to use with CPUs)
 
 FSL is a comprehensive library of analysis tools for FMRI, MRI and diffusion brain imaging data. 
 Most of the tools can be run both from the command line and as GUIs ("point-and-click" graphical user interfaces).
@@ -22,6 +22,8 @@ To start the container with Docker type `docker run -it --rm -e DISPLAY=$DISPLAY
 To convert the Docker image into a Singularity Image File that can be used with Singularity/Apptainer type `docker save fsl -o fsl.tar`, then transfer this tarball on a host with Singularity (or Apptainer installed) and convert it to .sif using: `singularity build fsl.sif docker-archive://fsl.tar`.
 
 The container can be started with: `singularity shell --env DISPLAY=$DISPLAY --bind /tmp/.X11-unix:/tmp/.X11-unix fsl.sif`.
+
+Notice that if for instance is not installed on the host (and provided the Administrator allows it) you can install it yourself as an ordinary user (see https://apptainer.org/docs/admin/latest/installation.html).
 
 Once inside the container (either using Docker or Singularity/Apptainer) source an FSL setup file (`source $FSLDIR/etc/fslconf/fsl.sh`) and it is ready to run your analysis.
 
