@@ -3,7 +3,7 @@
 FSL is a comprehensive library of analysis tools for FMRI, MRI and diffusion brain imaging data. 
 Most of the tools can be run both from the command line and as GUIs ("point-and-click" graphical user interfaces).
 
-In this repository is provided a definition file to build FSL (with a working fsleyes) using a base Ubuntu image.
+In this repository is provided a Dockerfile to build FSL (with a working `fsleyes`) using a base Ubuntu image.
 
 **Warning: this repository does not include the FSL application itself.**
 
