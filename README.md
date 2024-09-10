@@ -23,7 +23,9 @@ To convert the Docker image into a Singularity Image File that can be used with 
 
 The container can be started with: `singularity shell --env DISPLAY=$DISPLAY --bind /tmp/.X11-unix:/tmp/.X11-unix fsl.sif`.
 
-Once inside the container (either using Docker or Singularity/Apptainer) source an FSL setup file (`source $FSLDIR/etc/fslconf/fsl.sh`) and run your analysis.
+Once inside the container (either using Docker or Singularity/Apptainer) source an FSL setup file (`source $FSLDIR/etc/fslconf/fsl.sh`) and it is ready to run your analysis.
+
+Do not forget to *bind* the folders containing your data on the host (i.e., the personal computer or HPC with the runnign container) to make then *visible* inside the container. With Docker this is done with the `-v` keyword and with Singularity/Apptainer with the `--bind` keyword (see https://singularity-userdoc.readthedocs.io/en/latest/bind_paths_and_mounts.html).
 
 If you run the container on a remote host you need to login with the `-X` option to allow display on your local computer (typically `ssh -i ~/.ssh/your_ssh_key -X your_username@host_name`).
 
