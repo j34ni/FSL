@@ -23,7 +23,7 @@ To convert the Docker image into a Singularity Image File that can be used with 
 
 The container can be started with: `singularity shell --env DISPLAY=$DISPLAY --bind /tmp/.X11-unix:/tmp/.X11-unix fsl.sif`.
 
-Notice that if for instance is not installed on the host (and provided the Administrator allows it) you can install it yourself as an ordinary user (see https://apptainer.org/docs/admin/latest/installation.html).
+Notice that if for instance Apptainer is not installed on the host (and provided the Administrator allows it) you can install it yourself as an ordinary user (see https://apptainer.org/docs/admin/latest/installation.html).
 
 Once inside the container (either using Docker or Singularity/Apptainer) source an FSL setup file (`source $FSLDIR/etc/fslconf/fsl.sh`) and it is ready to run your analysis.
 
