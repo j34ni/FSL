@@ -21,10 +21,14 @@ In order to build the FSL container:
 
 3- with Docker installed (see https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script) type: `docker build --progress=plain -t fsl -f Dockerfile .`
 
+### Run with Docker
+
 To start the container with Docker type `docker run -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix fsl:latest`
 
 ## Conversion to Singularity Image File
 To convert the Docker image into a Singularity Image File that can be used with Singularity/Apptainer type `docker save fsl -o fsl.tar`, then transfer this tarball on a host with Singularity (or Apptainer installed) and convert it to .sif using: `singularity build fsl.sif docker-archive://fsl.tar`.
+
+### Run with Singularity/Apptainer
 
 The container can be started with: `singularity shell --env DISPLAY=$DISPLAY --bind /tmp/.X11-unix:/tmp/.X11-unix fsl.sif`.
 
