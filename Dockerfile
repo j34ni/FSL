@@ -4,7 +4,7 @@ FROM ubuntu:22.04
 # Contact jeani@uio.no
 # Version v1.0.0
 #
-# This is a definition file to build FSL using a base container image with Ubuntu20.04 
+# This is a definition file to build FSL using a base container image with Ubuntu
 # It is the responsibility of the user to:
 #                 - register on https://fsl.fmrib.ox.ac.uk/fsldownloads_registration
 #                 - read and accept the terms of the FSL software License 
