@@ -29,7 +29,7 @@ If you run the container on a remote host you need to login with the `-X` option
 
 As an example the command `fsleyes -std` should open on your local computer a window showing something like:
 
-![screenshot](screenshot.png)
+![screenshot](Screenshot.png)
 
 Should you use this container recipe and/or related material please cite:
 
